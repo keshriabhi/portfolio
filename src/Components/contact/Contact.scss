@@ -1,0 +1,182 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: #fff;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    background: rgba(4, 1, 145, 0.945);
+    overflow: hidden;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      padding: 0 0 10px 0;
+
+      @include mobile {
+        font-size: 11px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      li {
+        width: 280px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 8px;
+        border: 1px solid rgba(51, 49, 172, 0.945);
+        margin: 10px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @include mobile {
+          width: 100%;
+          padding: 7px 10px;
+        }
+
+        &:hover {
+          border: 1px solid #fff;
+        }
+
+        i {
+          font-size: 20px;
+          margin-right: 14px;
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .social {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+
+      @include mobile {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .social-item {
+        width: 150px;
+        border-radius: 8px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2px 4px;
+
+          &:hover {
+            color: rgba(4, 1, 145, 0.945);
+          }
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+        &:hover {
+          background: #fff;
+          color: rgba(4, 1, 145, 0.945);
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 30px;
+    }
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        padding: 4px 8px;
+
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        padding: 7px 8px;
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: #fff;
+        background-color: crimson;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
+}
